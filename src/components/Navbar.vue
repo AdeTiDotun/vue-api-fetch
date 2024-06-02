@@ -49,6 +49,10 @@ h1 {
 }
 
 .link {
-  padding: 10px;
+  margin: 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffff;
 }
 </style>
