@@ -1,5 +1,9 @@
-<script setup></script>
+<script setup>
+import Repodetails from '../components/Repodetails.vue'
+</script>
 
 <template>
-  <main></main>
+  <main>
+    <Repodetails />
+  </main>
 </template>

@@ -9,7 +9,16 @@ const api = axios.create({
 })
 
 export default {
-  getUser(name) {
-    return api.get(`/users/${name}`)
+  getUser(username, page, perPage) {
+    return api.get(`/users/${username}/repos?page=${page}&per_page=${perPage}`)
+  },
+  getUserRepo(name) {
+    return api.get(`/repos/AdeTiDotun/${name}`)
+  },
+  getRepoBranches(name) {
+    return api.get(`/repos/AdeTiDotun/${name}/branches`)
+  },
+  getRepoDeployment(name) {
+    return api.get(`/repos/AdeTiDotun/${name}/deployments`)
   }
 }

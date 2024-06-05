@@ -10,7 +10,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
     <div class="navbarmenu">
       <router-link to="/" class="link">Home</router-link>
       <router-link to="/:pathMatch(.*)*" class="link">404 Page</router-link>
-      <router-link to="/errorboundary" class="link">Error Boundary</router-link>
+      <router-link to="/Errorpage.vue/" class="link">Error Boundary</router-link>
     </div>
   </div>
 </template>
@@ -27,12 +27,9 @@ body {
   display: flex;
   justify-content: space-between;
   background-color: black;
-  padding: 0;
-
   height: 90px;
   max-width: 100%;
   color: rgb(255, 255, 255);
-  border-radius: 10px;
   justify-content: center;
 }
 i {

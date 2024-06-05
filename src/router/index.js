@@ -8,15 +8,28 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
+    },
+    {
+      path: '/:catchAll(.*)*',
+      name: 'not-found',
+      component: () => import('../views/Errorpage.vue'),
+      meta: {
+        tittle: 'NotFound',
+        description: 'This is the 404 page'
+      }
+    },
+
+    {
+      path: '/errorboundary',
+      name: 'error-boundary',
+      component: () => import('../views/Errorpage.vue')
+    },
+
+    {
+      path: '/repopage/:name',
+      name: 'repo-details',
+      component: () => import('../views/Repopage.vue')
     }
-    // {
-    //   path: '/about',
-    //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
-    //   component: () => import('../views/AboutView.vue')
-    // }
   ]
 })
 
